@@ -1,9 +1,9 @@
 import style from './style.module.scss'
-import dribble from '@/assets/images/icons/dribble.svg'
-import behance from '@/assets/images/icons/be.svg'
-import instagram from '@/assets/images/icons/instagram.svg'
-import facebook from '@/assets/images/icons/facebook.svg'
-import spotify from '@/assets/images/icons/spotify.svg'
+import Dribble from '../Icons/Dribble'
+import Instagram from '../Icons/Instagram'
+import Behance from '../Icons/Behance'
+import Facebook from '../Icons/Facebook'
+import Spotify from '../Icons/Spotify'
 
 const SocialLinks = () => {
   return (
@@ -11,22 +11,22 @@ const SocialLinks = () => {
       <div>
         <h3>Check our works</h3>
         <a href="#">
-          <img src={dribble} alt="" />
+          <Dribble />
         </a>
         <a href="#">
-          <img src={instagram} alt="" />
+          <Instagram />
         </a>
         <a href="#">
-          <img src={behance} alt="" />
+          <Behance />
         </a>
       </div>
       <div>
         <h3>Check on us</h3>
         <a href="#">
-          <img src={facebook} alt="" />
+          <Facebook />
         </a>
         <a href="#">
-          <img src={spotify} alt="" />
+          <Spotify />
         </a>
       </div>
       <div>

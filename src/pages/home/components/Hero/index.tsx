@@ -1,9 +1,10 @@
 import style from './style.module.scss'
-import Art1 from './art/Art1'
-import Art2 from './art/Art2'
-import Art3 from './art/Art3'
-import Art4 from './art/Art4'
-import Art5 from './art/Art5'
+import Art1 from '@/components/global/Art/Art1'
+import Art2 from '@/components/global/Art/Art2'
+import Art3 from '@/components/global/Art/Art3'
+import Art4 from '@/components/global/Art/Art4'
+import Art5 from '@/components/global/Art/Art5'
+import Art6 from '@/components/global/Art/Art6'
 
 const Hero = () => {
   return (
@@ -16,6 +17,7 @@ const Hero = () => {
       <Art2 className={style.art2} />
       <Art4 className={style.art4} />
       <Art5 className={style.art5} />
+      <Art6 className={style.art6} />
     </div>
   )
 }

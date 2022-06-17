@@ -1,5 +1,5 @@
 import style from './style.module.scss'
-import arrowSm from '@/assets/images/icons/arrow-sm.svg'
+import ArrowSm from '../Icons/ArrowSm'
 
 const WorkWithUs = () => {
   return (
@@ -8,7 +8,7 @@ const WorkWithUs = () => {
       <div className={style.getStarted}>
         <h4>Get started</h4>
         <button>
-          <img src={arrowSm} alt="" />
+          <ArrowSm />
         </button>
       </div>
     </div>

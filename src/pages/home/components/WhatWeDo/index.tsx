@@ -1,5 +1,5 @@
 import style from './style.module.scss'
-import arrowLg from '@/assets/images/icons/arrow-lg.svg'
+import ArrowLg from '@/components/global/Icons/ArrowLg'
 
 const WhatWeDo = () => {
   return (
@@ -17,7 +17,7 @@ const WhatWeDo = () => {
           <div>
             <p>See all</p>
             <button>
-              <img src={arrowLg} alt="" />
+              <ArrowLg />
             </button>
           </div>
         </div>

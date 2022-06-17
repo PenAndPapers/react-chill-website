@@ -1,0 +1,39 @@
+@import '@/assets/scss/variables';
+
+.workWithUs {
+  margin: 6rem auto 10rem;
+  padding: 2.5rem 6.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $blue;
+  border-radius: 1rem;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h2, h4 {
+    font-family: $dmSans;
+    color: #FFFFFF;
+  }
+
+  .getStarted {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h4 {
+      font-size: 1.5rem;
+    }
+    button {
+      min-width: 6.5rem;
+      min-height: 3.75rem;
+      margin-left: 4rem;
+      padding: 0 1rem;
+      border-radius: 5rem;
+      border: 2px solid #FFFFFF;
+      background: transparent;
+      text-align: right;
+    }
+  }
+}

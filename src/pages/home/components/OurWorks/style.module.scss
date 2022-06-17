@@ -1,0 +1,62 @@
+@import '@/assets/scss/variables';
+
+.ourWorks {
+  margin: 12rem auto 0;
+  h2 {
+    margin: 0 auto 3rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-family: $spaceGrotesk;
+    color: $black;
+  }
+
+  .workSlider {
+    width: 100%;
+    padding-bottom: 2rem;
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $gray; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $yellow;
+    }
+
+    article {
+      min-height: 20rem;
+      min-width: calc(1210px / 2.82);
+      border: 2px solid;
+      figure {
+        text-align: center;
+        img {
+          min-width: 175px;
+          min-height: 175px;
+          margin: 3rem auto;
+          text-align: center;
+          background: $gray;
+        }
+      }
+      
+      div {
+        padding: 1.5rem 1rem;
+        h4 {
+          margin-bottom: 1rem;
+          font-size: 2.15rem;
+          font-weight: 500;
+          font-family: $spaceGrotesk;
+          color: $white;
+        }
+        p {
+          color: $white;
+        }
+      }
+    }
+  }
+}

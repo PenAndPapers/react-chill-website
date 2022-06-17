@@ -1,0 +1,46 @@
+@import '@/assets/scss/variables';
+
+.hero {
+  margin: 8rem auto 0;
+  position: relative;
+  .text {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    h1 {
+      margin-bottom: 4rem;
+      font-size: 4rem;
+      font-weight: 500;
+      font-family: $spaceGrotesk;
+      span {
+        display: inline-grid;
+        text-align: left;
+        color: $pink;
+      }
+    }
+    p {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+  .art1 {
+    position: absolute;
+    top: 2rem;
+    left: 7rem;
+  }
+  .art2 {
+    position: absolute;
+    top: -3rem;
+    right: 8rem;
+  }
+  .art4 {
+    position: absolute;
+    bottom: 3rem;
+    right: 18rem;
+  }
+  .art5 {
+    position: absolute;
+    bottom: 5rem;
+    left: 20rem;
+  }
+}

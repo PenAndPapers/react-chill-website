@@ -1,0 +1,48 @@
+@import './variables.scss';
+
+.container {
+  max-width: 1366px;
+  margin: 2rem auto;
+  padding: 0 4.5rem;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.content-center {
+  justify-content: center;
+}
+
+.border-yellow {
+  border-color: $yellow !important;
+}
+
+.border-blue {
+  border-color: $blue !important;
+}
+
+.border-red {
+  border-color: $red !important;
+}
+
+.bg-yellow {
+  background: $yellow !important;
+}
+
+.bg-blue {
+  background: $blue !important;
+}
+
+.bg-red {
+  background: $red !important;
+}

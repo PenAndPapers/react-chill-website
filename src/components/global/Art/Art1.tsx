@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import gsap, { Power3 } from 'gsap'
+import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
 
 interface Props {
   className?: string;
@@ -14,14 +14,19 @@ const Art1 = (props: Props) => {
   const handleAnimation = () => {
     const timeLine = gsap.timeline()
     timeLine
-      .from(path1, {opacity: 0})
-      .to(path1, {opacity: 1, duration: .15})
-      .from(path2, {opacity: 0})
-      .to(path2, {opacity: 1, duration: .15})
-      .from(path3, {opacity: 0})
-      .to(path3, {opacity: 1, duration: .15})
-      .from(path4, {opacity: 0})
-      .to(path4, {opacity: 1, duration: .15})
+      .fromTo(
+        [path1, path2, path3, path4], 
+        {
+          opacity: 0,
+          ease: 'easeIn'
+        }, 
+        {
+          opacity: 1,
+          stagger: .25,
+          duration: 1,
+          ease: 'easeOut'
+        }
+      )
   }
 
   useEffect(() => {

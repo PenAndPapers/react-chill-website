@@ -1,0 +1,79 @@
+@import '@/assets/scss/variables';
+
+.contactForm {
+  margin: 0 auto;
+  form {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    .cols2, .cols4 {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .cols2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .cols4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    h4 {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+    }
+    button, input {
+      width: 100%;
+      height: 50px;
+      border: 1px solid $black;
+      font-size: .85rem;
+      background: transparent;
+    }
+    button {
+      &:hover,
+      &:active {
+        transition: all .5s;
+        background: $black;
+        color: $white;
+      }
+    }
+    input,textarea {
+      font-family: $openSans;
+      &::-webkit-input-placeholder {
+        color: $black;
+      }
+      &:-ms-input-placeholder {
+        color: $black;
+      }
+      &::placeholder {
+        color: $black;
+      }
+    }
+    input {
+      padding: 0;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      border-bottom: 1px solid $black;
+      font-size: 1rem;
+    }
+    textarea {
+      margin-bottom: 6rem;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      border-bottom: 1px solid $black;
+      font-size: 1rem;
+    }
+    .btnSend {
+      width: 280px;
+      height: 3.5rem;
+      border-radius: .75rem;
+      border: none;
+      font-size: 1.5rem;
+      font-weight: 500;
+      font-family: $spaceGrotesk;;
+      color: $white;
+      background: $yellow;
+    }
+  }
+}

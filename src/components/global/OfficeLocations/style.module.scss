@@ -1,0 +1,32 @@
+@import '@/assets/scss/variables';
+
+.officeLocations {
+  margin-bottom: 10rem;
+  .officeList {
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem
+  }
+
+  .officeCard {
+    max-width: 280px;
+    h4 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      font-family: $spaceGrotesk;
+      line-height: 2.75rem;
+    }
+    h2 {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 2.25rem;
+    }
+    p {
+      font-weight: 400;
+      font-size: 1rem;
+      font-family: $dmSans;
+      line-height: 2rem;
+    }
+  }
+}

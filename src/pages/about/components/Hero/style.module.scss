@@ -1,0 +1,30 @@
+@import '@/assets/scss/variables';
+
+.hero {
+  margin: 18rem auto 0;
+  position: relative;
+  h2 {
+    margin: 0 auto 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    color: $black;
+  }
+  h1 {
+    font-weight: 400;
+    font-size: 6rem;
+    font-family: $spaceGrotesk;
+    span {
+      display: inline-grid;
+      color: $red;
+      svg {
+        margin-top: -2.5rem;
+      }
+    }
+  }
+  .art9 {
+    position: absolute;
+    top: -10rem;
+    right: 10rem;
+  }
+}

@@ -35,11 +35,15 @@
       background: transparent;
     }
     button {
+      transition: all .5s;
       &:hover,
       &:active {
-        transition: all .5s;
         background: $black;
         color: $white;
+      }
+      &.active {
+        color: $white;
+        background: $black;
       }
     }
     input,textarea {

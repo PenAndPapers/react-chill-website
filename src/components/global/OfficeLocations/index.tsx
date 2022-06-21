@@ -22,7 +22,7 @@ const OfficeLocations = () => {
       },
       {
         id: 3,
-        name: 'Chill Hungary',
+        name: 'Chill Italy',
         address: 'Via Monte del Pascolo, 20, 30034 Mira VE, Italy',
         mobileNumber: '+39 06 648 2020',
         email: 'venice@chillagency.az'

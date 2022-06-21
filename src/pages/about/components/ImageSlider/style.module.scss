@@ -1,0 +1,27 @@
+@import '@/assets/scss/variables';
+
+.imageSlider {
+  width: 100%;
+  margin: 0 -4.5rem 0;
+  .slider {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    overflow-x: auto;
+    .card {
+      transition: all .5;
+      min-width: calc(30% + 2rem);
+      height: 300px;
+      &.active {
+        min-width: 40%;
+        height: 370px;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}

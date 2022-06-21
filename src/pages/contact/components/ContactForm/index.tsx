@@ -1,8 +1,18 @@
-import { useState} from 'react'
+import React, { useState} from 'react'
 import style from './style.module.scss'
 
+interface Form {
+  service: string;
+  budget: string;
+  fname: string;
+  lname: string;
+  mobileNumber: string;
+  email: string;
+  message?: string;
+}
+
 const ContactForm = () => {
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<Form>({
     service: '',
     budget: '',
     fname: '',
@@ -11,10 +21,11 @@ const ContactForm = () => {
     email: '',
     message: ''
   })
-  const [formError, setErrors] = useState({})
+  const [formError, setErrors] = useState<Form | object>({})
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = event.target
+  const handleFormUpdate = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault()
+    const { name, value } = (event.target as HTMLInputElement)
     
     setForm({ ...form, [name]: value })
   }
@@ -28,14 +39,20 @@ const ContactForm = () => {
     if (!form.lname) errors.lname = 'Last name is required'
     if (!form.mobileNumber) errors.mobileNumber = 'Mobile number is required'
     if (!form.email) errors.email = 'Email is required'
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errors.email = 'Email is invalid'
+    if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errors.email = 'Email is invalid'
     
     setErrors(errors)
+
+    return Object.keys(errors).length ? errors : null
   }
 
-  const handleSubmit = (event: React.SyntheticEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.SyntheticEvent<HTMLFormElement>) => {
     event?.preventDefault()
-    handleValidate()
+    const errors = await handleValidate()
+
+    if (!errors) {
+      // submit data in API
+    }
   }
 
   return (
@@ -44,22 +61,22 @@ const ContactForm = () => {
         <div className={style.row}>
           <h4>Service</h4>
           <div className={style.cols4}>
-            <button>Web Design</button>
-            <button>App Design</button>
-            <button>Development</button>
-            <button>Branding</button>
+            <button name='service' value='Web Design' className={ form.service === 'Web Design' ? style.active : '' } onClick={handleFormUpdate}>Web Design</button>
+            <button name='service' value='App Design' className={ form.service === 'App Design' ? style.active : '' } onClick={handleFormUpdate}>App Design</button>
+            <button name='service' value='Development' className={ form.service === 'Development' ? style.active : '' } onClick={handleFormUpdate}>Development</button>
+            <button name='service' value='Branding' className={ form.service === 'Branding' ? style.active : '' } onClick={handleFormUpdate}>Branding</button>
           </div>
-          <p className={style.error}>{ formError.service }</p>
+          { formError.service && <p className={style.error}>{ formError.service }</p> }
         </div>
         
         <div className={style.row}>
           <h4>Budget in USD</h4>
           <div className={style.cols4}>
-            <button>5k-10k</button>
-            <button>10k-50k</button>
-            <button>More than 50k</button>
+            <button name='budget' value='5k-10k' className={ form.budget === '5k-10k' ? style.active : '' } onClick={handleFormUpdate}>5k-10k</button>
+            <button name='budget' value='10k-50k' className={ form.budget === '10k-50k' ? style.active : '' } onClick={handleFormUpdate}>10k-50k</button>
+            <button name='budget' value='50k+' className={ form.budget === '50k+' ? style.active : '' } onClick={handleFormUpdate}>More than 50k</button>
           </div>
-          <p className={style.error}>{ formError.budget }</p>
+          { formError.budget && <p className={style.error}>{ formError.budget }</p> }
         </div>
         
         <div className={style.row}>
@@ -70,9 +87,9 @@ const ContactForm = () => {
                 placeholder='First name'
                 name='fname'
                 value={form.fname}
-                onChange={handleChange}
+                onChange={handleFormUpdate}
               />
-              <p className={style.error}>{ formError.fname }</p>
+              { formError.fname && <p className={style.error}>{ formError.fname }</p> }
             </div>
             <div className={style.field}>
               <input
@@ -80,9 +97,9 @@ const ContactForm = () => {
                 placeholder='Last name'
                 name='lname'
                 value={form.lname}
-                onChange={handleChange}
+                onChange={handleFormUpdate}
               />
-              <p className={style.error}>{ formError.lname }</p>
+              { formError.lname && <p className={style.error}>{ formError.lname }</p> }
             </div>
           </div>
         </div>
@@ -95,9 +112,9 @@ const ContactForm = () => {
                 placeholder='Mobile number'
                 name='mobileNumber'
                 value={form.mobileNumber}
-                onChange={handleChange}
+                onChange={handleFormUpdate}
               />
-              <p className={style.error}>{ formError.mobileNumber }</p>
+              { formError.mobileNumber && <p className={style.error}>{ formError.mobileNumber }</p> }
             </div>
             <div className={style.field}>
               <input
@@ -105,9 +122,9 @@ const ContactForm = () => {
                 placeholder='Email address'
                 name='email'
                 value={form.email}
-                onChange={handleChange}
+                onChange={handleFormUpdate}
               />
-              <p className={style.error}>{ formError.email }</p>
+              { formError.mobileNumber && <p className={style.error}>{ formError.email }</p> }
             </div>
           </div>
         </div>
@@ -119,7 +136,7 @@ const ContactForm = () => {
               name='message'
               rows={7} 
               value={form.message}
-              onChange={handleChange}
+              onChange={handleFormUpdate}
             />
           </div>
         </div>

@@ -4,6 +4,7 @@
   max-width: 1366px;
   margin: 2rem auto;
   padding: 0 4.5rem;
+  position: relative;
   overflow: hidden;
 }
 
@@ -45,4 +46,35 @@
 
 .bg-red {
   background: $red !important;
+}
+
+.slick-list {
+  .slick-track {
+    display: flex;
+    align-items: center;
+    &:hover {
+      cursor: move;
+    }
+    .slick-slide {
+      padding: 0 1rem;
+      transition: all .5s;
+      &:active,
+      &:focus {
+        border: none;
+        outline: none;
+      }
+      &.slick-active {
+        border: none;
+        outline: none;
+        img {
+          height: 380px;
+        }
+      }
+      img {
+        height: 300px;
+        width: 590px;
+        object-fit: cover;
+      }
+    }
+  }
 }

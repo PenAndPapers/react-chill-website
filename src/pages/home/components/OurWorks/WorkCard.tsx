@@ -5,15 +5,15 @@ interface Props {
 }
 
 const WorkCard = (props: Props) => {
-  const data = props.data
+  const { classes, img, title, type } = props.data
   return (
-    <article className={data.classes.border}>
+    <article className={classes.border}>
       <figure>
-        <img src={data.img} className={data.classes.bg} alt="" />
+        <img src={img} alt={title} />
       </figure>
-      <div className={data.classes.bg}>
-        <h4>{ data.title }</h4>
-        <p>{ data.type }</p>
+      <div className={classes.bg}>
+        <h4>{ title }</h4>
+        <p>{ type }</p>
       </div>
     </article>
   )

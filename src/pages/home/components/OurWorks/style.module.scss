@@ -36,11 +36,12 @@
       figure {
         text-align: center;
         img {
-          min-width: 175px;
-          min-height: 175px;
+          width: 175px;
+          height: 175px;
           margin: 3rem auto;
+          object-fit: contain;
+          object-position: center;
           text-align: center;
-          background: $gray;
         }
       }
       

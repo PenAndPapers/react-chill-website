@@ -1,8 +1,8 @@
 import style from './style.module.scss'
 import WorkSlider from './WorkSlider'
-import zearn from '@/assets/images/home/works/zearn.png'
-import oneplus from '@/assets/images/home/works/oneplus.png'
-import figma from '@/assets/images/home/works/figma.png'
+import zearn from '@/assets/images/home/work/zearn.png'
+import oneplus from '@/assets/images/home/work/oneplus.png'
+import figma from '@/assets/images/home/work/figma.png'
 import { WorkModelList } from '@/models/WorksModel'
 
 const OurWorks = () => {

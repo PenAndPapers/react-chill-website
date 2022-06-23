@@ -13,6 +13,6 @@ export interface WorkModel {
   link?: string;
 }
 
-export interface WorkModelList {
+export interface WorkListModel {
   data: WorkModel[]
 }

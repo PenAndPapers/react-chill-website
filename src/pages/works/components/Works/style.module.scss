@@ -1,0 +1,62 @@
+@import '@/assets/scss/variables';
+
+.works {
+  margin: 10rem auto 0;
+  .workList {
+    display: block;
+  }
+  .workCard {
+    margin: 5rem auto 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    &.reverse {
+      flex-direction: row-reverse;
+      .banner {
+        box-shadow: 16px 16px 0px rgba(0, 0, 0, 0.08);
+      }
+    }
+    .banner {
+      min-width: 488px;
+      height: 488px;
+      display: flex;
+      align-items: center;
+      box-shadow: -16px 16px 0px rgba(0, 0, 0, 0.08);
+      img {
+        margin: 0 auto;
+      }
+    }
+    .details {
+      position: relative;
+      h2 {
+        font-size: 34px;
+        font-weight: 500;
+        font-family: $spaceGrotesk;
+      }
+      p {
+        margin: 2rem auto 0;
+        font-weight: 1rem;
+        font-family: $dmSans;
+        line-height: 1.5rem;
+        &.type {
+          margin-bottom: 2rem;
+          font-family: $spaceGrotesk;
+        }
+      }
+      a {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        float: right;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 1.25rem;
+        font-family: $dmSans;
+        color: $black;
+        span {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}

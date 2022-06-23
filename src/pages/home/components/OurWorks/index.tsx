@@ -3,10 +3,10 @@ import WorkSlider from './WorkSlider'
 import zearn from '@/assets/images/home/work/zearn.png'
 import oneplus from '@/assets/images/home/work/oneplus.png'
 import figma from '@/assets/images/home/work/figma.png'
-import { WorkModelList } from '@/models/WorksModel'
+import { WorkListModel } from '@/models/WorksModel'
 
 const OurWorks = () => {
-  const data: WorkModelList = {
+  const data: WorkListModel = {
     data: [
       {
         id: 1,

@@ -1,9 +1,9 @@
 import WorkCard from './WorkCard'
-import { WorkModelList } from '@/models/WorksModel'
+import { WorkListModel } from '@/models/WorksModel'
 import style from './style.module.scss'
 
 interface Props {
-  works: WorkModelList
+  works: WorkListModel
 }
 
 const WorkSlider = (props: Props) => {

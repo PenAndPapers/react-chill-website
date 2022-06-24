@@ -130,7 +130,7 @@ const ContactForm = () => {
         </div>
 
         <div className={style.row}>
-          <div className={'grid'}>
+          <div className={style.field}>
             <textarea
               placeholder='Enter your message'
               name='message'

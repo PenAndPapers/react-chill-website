@@ -47,7 +47,14 @@
       }
     }
     input,textarea {
+      width: 100%;
       font-family: $openSans;
+      padding: 0;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      border-bottom: 1px solid $black;
+      font-size: 1rem;
       &::-webkit-input-placeholder {
         color: $black;
       }
@@ -58,21 +65,8 @@
         color: $black;
       }
     }
-    input {
-      padding: 0;
-      border-left: none;
-      border-right: none;
-      border-top: none;
-      border-bottom: 1px solid $black;
-      font-size: 1rem;
-    }
     textarea {
       margin-bottom: 6rem;
-      border-left: none;
-      border-right: none;
-      border-top: none;
-      border-bottom: 1px solid $black;
-      font-size: 1rem;
     }
     .btnSend {
       width: 280px;

@@ -1,4 +1,5 @@
 @import '@/assets/scss/variables';
+@import '@/assets/scss/extends';
 
 .works {
   margin: 10rem auto 0;
@@ -6,9 +7,8 @@
     display: block;
   }
   .workCard {
+    @extend .flex-centered;
     margin: 5rem auto 0;
-    display: flex;
-    align-items: center;
     gap: 2rem;
     &.reverse {
       flex-direction: row-reverse;
@@ -17,10 +17,9 @@
       }
     }
     .banner {
+      @extend .flex-centered;
       min-width: 488px;
       height: 488px;
-      display: flex;
-      align-items: center;
       box-shadow: -16px 16px 0px rgba(0, 0, 0, 0.08);
       img {
         margin: 0 auto;
@@ -44,9 +43,8 @@
         }
       }
       a {
+        @extend .flex-centered;
         margin-top: 2rem;
-        display: flex;
-        align-items: center;
         float: right;
         text-decoration: none;
         font-weight: 400;

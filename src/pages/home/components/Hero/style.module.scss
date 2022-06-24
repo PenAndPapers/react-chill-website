@@ -1,4 +1,5 @@
 @import '@/assets/scss/variables';
+@import '@/assets/scss/mixins';
 
 .hero {
   margin: 8rem auto 0;
@@ -24,28 +25,18 @@
     }
   }
   .art1 {
-    position: absolute;
-    top: 2rem;
-    left: 7rem;
+    @include art(absolute, 2rem, auto, auto, 7rem);
   }
   .art2 {
-    position: absolute;
-    top: -3rem;
-    right: 8rem;
+    @include art(absolute, -3rem, 8rem, auto, auto);
   }
   .art4 {
-    position: absolute;
-    bottom: 3rem;
-    right: 18rem;
+    @include art(absolute, auto, 18rem, 3rem, auto);
   }
   .art5 {
-    position: absolute;
-    bottom: 5rem;
-    left: 20rem;
+    @include art(absolute, auto, auto, 5rem, 20rem);
   }
   .art6 {
-    position: absolute;
-    bottom: -5rem;
-    right: 3rem;
+    @include art(absolute, auto, 3rem, -5rem, auto);
   }
 }

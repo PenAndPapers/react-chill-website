@@ -1,4 +1,5 @@
 @import '@/assets/scss/variables';
+@import '@/assets/scss/extends';
 
 .whatWeDo {
   margin: 14rem auto 0;
@@ -11,9 +12,8 @@
   }
 
   .contents {
+    @extend .flex-centered;
     min-height: 425px;
-    display: flex;
-    align-items: center;
     justify-content: center;
     gap: 2rem;
   }
@@ -23,8 +23,7 @@
     position: relative;
     height: 100%;
     img {
-      object-fit: cover;
-      object-position: center;
+      @extend .image-fit;
     }
   }
 

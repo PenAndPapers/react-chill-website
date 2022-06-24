@@ -1,21 +1,12 @@
 @import '@/assets/scss/variables';
+@import '@/assets/scss/mixins';
 
 .hero {
   margin: 18rem auto 0;
-  position: relative;
-  h2 {
-    margin: 0 auto 2rem;
-    font-size: 2rem;
-    font-weight: 700;
-    font-style: italic;
-    color: $black;
-  }
+  @include hero;
   h1 {
-    position: relative;
     max-width: 70%;
-    font-weight: 400;
-    font-size: 6rem;
-    font-family: $spaceGrotesk;
+    position: relative;
     span {
       display: inline-grid;
       color: $green;
@@ -25,18 +16,12 @@
     }
   }
   .art2 {
-    position: absolute;
-    top: -3rem;
-    right: 3rem;
+    @include art(absolute, -3rem, 3rem, auto, auto);
   }
   .art10 {
-    position: absolute;
-    top: -10rem;
-    right: 10rem;
+    @include art(absolute, -10rem, 10rem, auto, auto);
   }
   .art11 {
-    position: absolute;
-    top: -10rem;
-    right: 13rem;
+    @include art(absolute, -10rem, 13rem, auto, auto);
   }
 }

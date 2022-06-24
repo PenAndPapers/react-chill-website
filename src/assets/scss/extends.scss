@@ -1,0 +1,11 @@
+
+
+.flex-centered {
+  display: flex;
+  align-items: center;
+}
+
+.image-fit {
+  object-fit: contain;
+  object-position: center;
+}

@@ -1,10 +1,10 @@
 import {useEffect, useState} from 'react'
 import WorkCard from './WorkCard'
-import { WorkListModel, WorkModel } from '@/models/WorksModel'
+import { WorkModel } from '@/models/WorksModel'
 import style from './style.module.scss'
 
 interface Props {
-  data: WorkListModel
+  works: WorkModel[]
 }
 
 const WorkList = (props: Props) => {
@@ -12,7 +12,7 @@ const WorkList = (props: Props) => {
 
   // trigger on component mount
   useEffect(() => {
-    setData(props.data.data)
+    setData(data => data = props.works)
   }, [data])
 
   return (

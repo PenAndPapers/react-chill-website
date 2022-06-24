@@ -1,17 +1,17 @@
-import { ClientListModel, ClientModel } from '@/models/ClientModel'
+import { ClientModel } from '@/models/ClientModel'
 import {useEffect, useState} from 'react'
 import ClientCard from './ClientCard'
 import style from './style.module.scss'
 
 interface Props {
-  data: ClientListModel
+  clients: ClientModel[]
 }
 
 const ClientList = (props: Props) => {
   const [clients, setClients] = useState<ClientModel[] | null>()
 
   useEffect(() => {
-    setClients(props.data.data)
+    setClients(clients => clients = props.clients)
   }, [clients])
 
   return (

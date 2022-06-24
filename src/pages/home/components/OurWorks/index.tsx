@@ -6,7 +6,7 @@ import figma from '@/assets/images/home/work/figma.png'
 import { WorkListModel } from '@/models/WorksModel'
 
 const OurWorks = () => {
-  const data: WorkListModel = {
+  const works: WorkListModel = {
     data: [
       {
         id: 1,
@@ -94,7 +94,7 @@ const OurWorks = () => {
   return (
     <div className={style.ourWorks}>
       <h2>Our works</h2>
-      <WorkSlider works={data} />
+      <WorkSlider works={works} />
     </div>
   )
 }

@@ -1,11 +1,7 @@
 import { SlideCardModel } from '@/models/AboutUsSliderModel'
 
-interface Props {
-  data: SlideCardModel
-}
-
-const SlideCard = (props: Props) => {
-  const { img, title } = props.data
+const SlideCard = (props: SlideCardModel) => {
+  const { img, title } = props
   return (
     <div>
       <img src={img} alt={title} />

@@ -51,7 +51,7 @@ const ContactForm = () => {
     const errors = await handleValidate()
 
     if (!errors) {
-      // submit data in API
+      // submit data to API
     }
   }
 

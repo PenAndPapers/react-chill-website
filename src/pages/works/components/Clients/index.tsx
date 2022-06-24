@@ -4,7 +4,7 @@ import { ClientListModel } from '@/models/ClientModel'
 import style from './style.module.scss'
 
 const Clients = () => {
-  const data: ClientListModel = {
+  const clients: ClientListModel = {
     data: [
       {
         id: 1,
@@ -32,7 +32,7 @@ const Clients = () => {
   return (
     <div className={style.clients}>
       <h2>Our clients</h2>
-      <ClientList data={data} />
+      <ClientList clients={clients.data} />
     </div>
   )
 }

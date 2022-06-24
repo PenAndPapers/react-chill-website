@@ -5,7 +5,7 @@ import WorkImg from '@/assets/images/works/work.png'
 import style from './style.module.scss'
 
 const Works = () => {
-  const data: WorkListModel = {
+  const works: WorkListModel = {
     data: [
       {
         id: 1,
@@ -60,7 +60,7 @@ const Works = () => {
   return (
     <div className={style.works}>
       {
-        data && <WorkList data={data } />
+        (works && works.data.length) && <WorkList works={works.data} />
       }
     </div>
   )

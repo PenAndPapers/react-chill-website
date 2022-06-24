@@ -1,11 +1,7 @@
 import { WorkModel } from '@/models/WorksModel'
 
-interface Props {
-  data: WorkModel
-}
-
-const WorkCard = (props: Props) => {
-  const { classes, img, title, type } = props.data
+const WorkCard = (props: WorkModel) => {
+  const { classes, img, title, type } = props
   return (
     <article className={classes.border}>
       <figure>

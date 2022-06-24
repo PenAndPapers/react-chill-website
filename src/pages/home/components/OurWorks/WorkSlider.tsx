@@ -10,9 +10,7 @@ const WorkSlider = (props: Props) => {
   const data = props.works.data
   return (
     <div className={style.workSlider}>
-      {
-        data.map(item => <WorkCard data={item} key={item.id} />)
-      }
+      { data.map(item => <WorkCard {...item} key={item.id} />) }
     </div>
   )
 }

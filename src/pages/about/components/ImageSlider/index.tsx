@@ -7,7 +7,7 @@ import { SliderList } from '@/models/AboutUsSliderModel'
 
 const ImageSlider = () => {
 
-  const data: SliderList = {
+  const slides: SliderList = {
     data: [
       {
         id: 1,
@@ -54,7 +54,7 @@ const ImageSlider = () => {
     <div className={style.imageSlider}>
       <div className={style.sliderContainer}>
         <Slider {...settings}>
-          { data.data.map(item => <SlideCard data={item} key={item.id} /> ) }
+          { slides.data.map(item => <SlideCard {...item} key={item.id} /> ) }
         </Slider>
       </div>
     </div>

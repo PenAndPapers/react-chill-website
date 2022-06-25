@@ -3,6 +3,7 @@
 
 .whatWeDo {
   margin: 14rem auto 0;
+  overflow: hidden;
   h2 {
     margin: 0 auto 3rem;
     font-size: 2.5rem;
@@ -24,6 +25,15 @@
     height: 100%;
     img {
       @extend .image-fit;
+    }
+    .curtain {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $white;
     }
   }
 
@@ -56,6 +66,7 @@
           position: absolute;
           left: -5rem;
           transform: translateY(-50%);
+          opacity: 0;
         }
       }
     }

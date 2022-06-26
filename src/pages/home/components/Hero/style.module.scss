@@ -9,19 +9,34 @@
     margin: 0 auto;
     text-align: center;
     h1 {
-      margin-bottom: 4rem;
       font-size: 4rem;
       font-weight: 500;
       font-family: $spaceGrotesk;
+      &:nth-child(2) {
+        margin-bottom: 4rem;
+        span {
+          a { color: $pink; }
+        }
+      }
       span {
-        display: inline-grid;
-        text-align: left;
-        color: $pink;
+        span {
+          display: inline-grid;
+          text-align: left;
+          transform: translateY(0%);
+        }
       }
     }
     p {
       font-size: 1.5rem;
       font-weight: 400;
+      line-height: 2rem;
+    }
+    h1, p {
+      overflow: hidden;
+      span {
+        display: inline-block;
+        transform: translateY(100%);
+      }
     }
   }
   .art1 {
@@ -38,5 +53,12 @@
   }
   .art6 {
     @include art(absolute, auto, 3rem, -5rem, auto);
+  }
+
+  .art1, .art2, .art4, .art5, .art6 {
+    overflow: hidden;
+    svg {
+      transform: translateY(-110%);
+    }
   }
 }

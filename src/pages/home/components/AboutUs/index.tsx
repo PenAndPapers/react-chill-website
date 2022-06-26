@@ -7,8 +7,6 @@ import artBoard3 from '@/assets/images/icons/artBoard3.svg'
 import artBoard4 from '@/assets/images/icons/artBoard4.svg'
 
 const AboutUs = () => {
-  let h1 = useRef()
-  let h2 = useRef()
   let span0 = useRef()
   let span1 = useRef()
   let span2 = useRef()
@@ -39,7 +37,9 @@ const AboutUs = () => {
       <div className={style.contents}>
         <div>
           <h1>
-            <span ref={el => {span1 = el}}>Product Design</span> 
+            <span ref={el => {span1 = el}}>Product Design</span>
+          </h1>
+          <h1>
             <span ref={el => {span2 = el}}>with character</span>
           </h1>
         </div>
